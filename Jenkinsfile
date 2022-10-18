@@ -6,6 +6,11 @@ pipeline {
             steps {
                 sh 'python --version'
                 sh 'python --version'
+                sh '''
+                    echo "viceradkovy"
+                    echo "command"
+                    ls -lah
+                ```
             }
         }
     }
