@@ -1,2 +1,2 @@
-#!/bin/bash
+#!/bin/sh
 echo "probehlo v poradku"
