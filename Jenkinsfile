@@ -7,10 +7,20 @@ pipeline {
                 sh 'python --version'
                 sh 'python --version'
                 sh '''
-                    echo "viceradkovy"
-                    echo "command"
+                    echo "ahoj"
+                    echo "dalsi radek"
                     ls -lah
-                ```
+                '''
+            }
+        }
+        stage('deploy') {
+            steps {
+                retry(2) {
+                    sh './flakey-deploy.sh'
+                }
+                timeout(time: 3, unit: 'MINUTES') {
+                    sh './health.sh'
+                }
             }
         }
     }
