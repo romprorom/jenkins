@@ -24,4 +24,16 @@ pipeline {
             }
         }
     }
+    post {
+        always {
+            echo 'this will run'
+        }
+        success {
+            echo 'this will run if success'
+        }
+        changed {
+            echo 'tohle se ukaze pokud se pipeline zmeni'
+            echo 'zkusit pridat unstable'
+        }
+    }
 }
