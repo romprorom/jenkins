@@ -30,10 +30,10 @@ pipeline {
     }
     post {
         always {
-            echo 'this will run always ${JEDNA}'
+            echo "this will run always ${JEDNA}"
         }
         success {
-            echo 'this will run if success ${DVA}'
+            echo "this will run if success ${DVA}"
         }
         unstable {
             echo 'tohle by se melo ukazat, pokud bude build nestabilni'
