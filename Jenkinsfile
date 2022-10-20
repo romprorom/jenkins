@@ -35,8 +35,8 @@ pipeline {
             echo 'tohle by se melo ukazat, pokud bude build nestabilni'
         }
         changed {
-            echo 'tohle se ukaze pokud se pipeline zmeni'
-            echo 'zkusit pridat unstable'
+            echo 'tohle se ukaze pokud se zmeni stav pipeline'
+            echo 'napriklad pokud predtim failovala'
         }
     }
 }
