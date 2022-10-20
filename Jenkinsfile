@@ -1,6 +1,10 @@
 /* Requires the Docker Pipeline plugin */
 pipeline {
     agent { docker { image 'python:3.10.7-alpine' } }
+    environment {
+        JEDNA = "1"
+        DVA = "2"
+    }
     stages {
         stage('build') {
             steps {
@@ -26,10 +30,10 @@ pipeline {
     }
     post {
         always {
-            echo 'this will run'
+            echo 'this will run always ${JEDNA}'
         }
         success {
-            echo 'this will run if success'
+            echo 'this will run if success ${DVA}'
         }
         unstable {
             echo 'tohle by se melo ukazat, pokud bude build nestabilni'
