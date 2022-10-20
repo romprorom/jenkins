@@ -31,6 +31,9 @@ pipeline {
         success {
             echo 'this will run if success'
         }
+        unstable {
+            echo 'tohle by se melo ukazat, pokud bude build nestabilni'
+        }
         changed {
             echo 'tohle se ukaze pokud se pipeline zmeni'
             echo 'zkusit pridat unstable'
